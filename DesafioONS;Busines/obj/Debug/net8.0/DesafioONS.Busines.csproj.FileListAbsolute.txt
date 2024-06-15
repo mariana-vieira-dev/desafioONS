@@ -1,0 +1,15 @@
+C:\temp\DesafioONS\DesafioONS;Busines\bin\Debug\net8.0\DesafioONS.Busines.deps.json
+C:\temp\DesafioONS\DesafioONS;Busines\bin\Debug\net8.0\DesafioONS.Busines.dll
+C:\temp\DesafioONS\DesafioONS;Busines\bin\Debug\net8.0\DesafioONS.Busines.pdb
+C:\temp\DesafioONS\DesafioONS;Busines\bin\Debug\net8.0\DesafioONS.Entities.dll
+C:\temp\DesafioONS\DesafioONS;Busines\bin\Debug\net8.0\DesafioONS.Entities.pdb
+C:\temp\DesafioONS\DesafioONS;Busines\obj\Debug\net8.0\DesafioONS.Busines.csproj.AssemblyReference.cache
+C:\temp\DesafioONS\DesafioONS;Busines\obj\Debug\net8.0\DesafioONS.Busines.GeneratedMSBuildEditorConfig.editorconfig
+C:\temp\DesafioONS\DesafioONS;Busines\obj\Debug\net8.0\DesafioONS.Busines.AssemblyInfoInputs.cache
+C:\temp\DesafioONS\DesafioONS;Busines\obj\Debug\net8.0\DesafioONS.Busines.AssemblyInfo.cs
+C:\temp\DesafioONS\DesafioONS;Busines\obj\Debug\net8.0\DesafioONS.Busines.csproj.CoreCompileInputs.cache
+C:\temp\DesafioONS\DesafioONS;Busines\obj\Debug\net8.0\DesafioO.CD73D988.Up2Date
+C:\temp\DesafioONS\DesafioONS;Busines\obj\Debug\net8.0\DesafioONS.Busines.dll
+C:\temp\DesafioONS\DesafioONS;Busines\obj\Debug\net8.0\refint\DesafioONS.Busines.dll
+C:\temp\DesafioONS\DesafioONS;Busines\obj\Debug\net8.0\DesafioONS.Busines.pdb
+C:\temp\DesafioONS\DesafioONS;Busines\obj\Debug\net8.0\ref\DesafioONS.Busines.dll

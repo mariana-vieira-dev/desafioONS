@@ -1,0 +1,17 @@
+C:\temp\DesafioONS\DesafioONS.Repository\bin\Debug\net8.0\DesafioONS.Repository.deps.json
+C:\temp\DesafioONS\DesafioONS.Repository\bin\Debug\net8.0\DesafioONS.Repository.runtimeconfig.json
+C:\temp\DesafioONS\DesafioONS.Repository\bin\Debug\net8.0\DesafioONS.Repository.dll
+C:\temp\DesafioONS\DesafioONS.Repository\bin\Debug\net8.0\DesafioONS.Repository.pdb
+C:\temp\DesafioONS\DesafioONS.Repository\bin\Debug\net8.0\DesafioONS.Entities.dll
+C:\temp\DesafioONS\DesafioONS.Repository\bin\Debug\net8.0\DesafioONS.Entities.pdb
+C:\temp\DesafioONS\DesafioONS.Repository\obj\Debug\net8.0\DesafioONS.Repository.csproj.AssemblyReference.cache
+C:\temp\DesafioONS\DesafioONS.Repository\obj\Debug\net8.0\DesafioONS.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\temp\DesafioONS\DesafioONS.Repository\obj\Debug\net8.0\DesafioONS.Repository.AssemblyInfoInputs.cache
+C:\temp\DesafioONS\DesafioONS.Repository\obj\Debug\net8.0\DesafioONS.Repository.AssemblyInfo.cs
+C:\temp\DesafioONS\DesafioONS.Repository\obj\Debug\net8.0\DesafioONS.Repository.csproj.CoreCompileInputs.cache
+C:\temp\DesafioONS\DesafioONS.Repository\obj\Debug\net8.0\DesafioO.2B7B47EA.Up2Date
+C:\temp\DesafioONS\DesafioONS.Repository\obj\Debug\net8.0\DesafioONS.Repository.dll
+C:\temp\DesafioONS\DesafioONS.Repository\obj\Debug\net8.0\refint\DesafioONS.Repository.dll
+C:\temp\DesafioONS\DesafioONS.Repository\obj\Debug\net8.0\DesafioONS.Repository.pdb
+C:\temp\DesafioONS\DesafioONS.Repository\obj\Debug\net8.0\DesafioONS.Repository.genruntimeconfig.cache
+C:\temp\DesafioONS\DesafioONS.Repository\obj\Debug\net8.0\ref\DesafioONS.Repository.dll

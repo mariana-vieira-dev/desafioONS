@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "DesafioONS.Busines/1.0.0": {
+        "dependencies": {
+          "DesafioONS.Entities": "1.0.0"
+        },
+        "runtime": {
+          "DesafioONS.Busines.dll": {}
+        }
+      },
+      "DesafioONS.Entities/1.0.0": {
+        "runtime": {
+          "DesafioONS.Entities.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DesafioONS.Busines/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DesafioONS.Entities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
