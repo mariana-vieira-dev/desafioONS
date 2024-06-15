@@ -25,6 +25,31 @@ Camada Common
 Camada Entities:
 - Criadas as classes de entidade (Usuário e Contato)
 
+-----------------------------------------------------------------------------------------------------------
+Script BD
+
+CREATE DATABASE DesafioONS;
+GO
+
+USE DesafioONS;
+GO
+
+CREATE TABLE Users (
+    Id INT PRIMARY KEY IDENTITY,
+    Name NVARCHAR(100) NOT NULL,
+    Email NVARCHAR(100) NOT NULL,
+    Login NVARCHAR(50) NOT NULL,
+    Password NVARCHAR(100) NOT NULL, 
+    Role NVARCHAR(50) NOT NULL
+);
+
+CREATE TABLE Contacts (
+    Id INT PRIMARY KEY IDENTITY,
+    PhoneNumber NVARCHAR(15) NOT NULL,
+    UserId INT NOT NULL,
+    FOREIGN KEY (UserId) REFERENCES Users(Id)
+);
+
 Camada Repository:
 - Implementados repositórios para realizar as operações no banco de dados
 - Implementado controle de transação com UnitOfWork, garantindo que as transações sejam confirmadas (commit) ou revertidas (rollback) corretamente em caso de sucesso ou falh
