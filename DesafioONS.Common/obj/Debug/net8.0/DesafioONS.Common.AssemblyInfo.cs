@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DesafioONS.Common")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6534e88678ffe68c0e3830fb0552e00441a94239")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f60a9c68b8ff1b2a2712a3f62e8f24f8f9fd1b82")]
 [assembly: System.Reflection.AssemblyProductAttribute("DesafioONS.Common")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DesafioONS.Common")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

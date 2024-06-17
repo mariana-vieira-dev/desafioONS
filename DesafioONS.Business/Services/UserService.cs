@@ -14,34 +14,25 @@ namespace DesafioONS.Business.Services
 
         public async Task<UserDTO> Authenticate(string login, string password)
         {
-            try
+            
+            var user = await _unitOfWork.UserRepository.GetUserByLoginAsync(login);
+
+            if (user == null || !VerifyPassword(user.Password, password))
+                return null;
+
+            return new UserDTO
             {
-                var user = await _unitOfWork.UserRepository.GetUserByLoginAsync(login);
-
-                if (user == null || !VerifyPassword(user.Password, password))
-                    return null;
-
-                return new UserDTO
+                Id = user.Id,
+                Name = user.Name,
+                Email = user.Email,
+                Login = user.Login,
+                Role = user.Role,
+                Contacts = user.Contacts.Select(contact => new ContactDTO
                 {
-                    Id = user.Id,
-                    Name = user.Name,
-                    Email = user.Email,
-                    Login = user.Login,
-                    Role = user.Role,
-                    Contacts = user.Contacts.Select(contact => new ContactDTO
-                    {
-                        Id = contact.Id,
-                        PhoneNumber = contact.PhoneNumber
-                    }).ToList()
-                };
-            }
-            catch (Exception ex)
-            {
-                // Log exception (use your preferred logging framework)
-                // For example: _logger.LogError(ex, "An error occurred while authenticating the user.");
-
-                throw new ApplicationException("An error occurred while authenticating the user.", ex);
-            }
+                    Id = contact.Id,
+                    PhoneNumber = contact.PhoneNumber
+                }).ToList()
+            };            
         }
 
         private bool VerifyPassword(string hashedPassword, string password)
@@ -50,5 +41,4 @@ namespace DesafioONS.Business.Services
             return BCrypt.Net.BCrypt.Verify(password, hashedPassword);
         }
     }
-
 }
