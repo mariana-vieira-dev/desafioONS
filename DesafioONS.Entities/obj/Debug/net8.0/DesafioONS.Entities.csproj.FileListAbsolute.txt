@@ -9,3 +9,4 @@ C:\temp\DesafioONS\DesafioONS.Entities\obj\Debug\net8.0\DesafioONS.Entities.dll
 C:\temp\DesafioONS\DesafioONS.Entities\obj\Debug\net8.0\refint\DesafioONS.Entities.dll
 C:\temp\DesafioONS\DesafioONS.Entities\obj\Debug\net8.0\DesafioONS.Entities.pdb
 C:\temp\DesafioONS\DesafioONS.Entities\obj\Debug\net8.0\ref\DesafioONS.Entities.dll
+C:\temp\DesafioONS\DesafioONS.Entities\obj\Debug\net8.0\DesafioONS.Entities.sourcelink.json

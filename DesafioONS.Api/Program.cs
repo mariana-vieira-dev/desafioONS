@@ -8,18 +8,7 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllers().AddJsonOptions(options =>
-{
-    options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.
-                                    Serialization.ReferenceHandler.IgnoreCycles;
-});
-builder.Services.AddEndpointsApiExplorer();
-
-builder.Services.AddAutoMapper(typeof(UserDTOMapping));
-builder.Services.AddAutoMapper(typeof(ContactDTOMapping));
-
-var userKey = Encoding.ASCII.GetBytes(builder.Configuration["Jwt:UserKey"]);
-var adminKey = Encoding.ASCII.GetBytes(builder.Configuration["Jwt:AdminKey"]);
+var Key = Encoding.ASCII.GetBytes(builder.Configuration["Jwt:Key"]);
 
 builder.Services.AddAuthentication(options =>
 {
@@ -33,7 +22,7 @@ builder.Services.AddAuthentication(options =>
     options.TokenValidationParameters = new TokenValidationParameters
     {
         ValidateIssuerSigningKey = true,
-        IssuerSigningKey = new SymmetricSecurityKey(userKey),
+        IssuerSigningKey = new SymmetricSecurityKey(Key),
         ValidateIssuer = true,
         ValidIssuer = builder.Configuration["Jwt:Issuer"],
         ValidateAudience = true,
@@ -43,11 +32,17 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
-builder.Services.AddAuthorization(options =>
+builder.Services.AddAuthorization();
+
+builder.Services.AddControllers().AddJsonOptions(options =>
 {
-    options.AddPolicy("AdminPolicy", policy => policy.RequireRole("admin"));
-    options.AddPolicy("UserPolicy", policy => policy.RequireRole("user"));
+    options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.
+                                    Serialization.ReferenceHandler.IgnoreCycles;
 });
+builder.Services.AddEndpointsApiExplorer();
+
+builder.Services.AddAutoMapper(typeof(UserDTOMapping));
+builder.Services.AddAutoMapper(typeof(ContactDTOMapping));
 
 // Configuração do Swagger
 builder.Services.AddSwaggerGen(c =>
@@ -77,10 +72,6 @@ builder.Services.AddSwaggerGen(c =>
             }
         });
 });
-
-
-
-builder.Services.AddAuthorization();
 
 builder.Services.AddRepository(builder.Configuration);
 

@@ -6,7 +6,7 @@ using System.Security.Claims;
 using System.Text;
 
 namespace DesafioONS.Business.Services
-{    
+{
     public class TokenService : ITokenService
     {
         private readonly IConfiguration _configuration;
@@ -18,29 +18,41 @@ namespace DesafioONS.Business.Services
 
         public string GenerateToken(UserDTO user)
         {
-            var tokenHandler = new JwtSecurityTokenHandler();
-            var key = user.Role == "admin"
-                ? Encoding.ASCII.GetBytes(_configuration["Jwt:AdminKey"])
-                : Encoding.ASCII.GetBytes(_configuration["Jwt:UserKey"]);
+            var tokenHandler = new JwtSecurityTokenHandler();            
 
-            var claims = new[]
-            {
+            if (string.IsNullOrEmpty(_configuration["Jwt:Key"]))
+                throw new ArgumentException("Jwt:Key is missing in configuration");
+
+            if (string.IsNullOrEmpty(_configuration["Jwt:Issuer"]))
+                throw new ArgumentException("Jwt:Issuer is missing in configuration");
+
+            if (string.IsNullOrEmpty(_configuration["Jwt:Audience"]))
+                throw new ArgumentException("Jwt:Audience is missing in configuration");
+
+            if (string.IsNullOrEmpty(_configuration["Jwt:ExpireMinutes"]))
+                throw new ArgumentException("Jwt:ExpireMinutes is missing in configuration");
+
+            var claims = new List<Claim>
+        {
+            new Claim(JwtRegisteredClaimNames.Sub, user.Login),
+            new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+            new Claim(JwtRegisteredClaimNames.Iat, DateTime.UtcNow.ToString(), ClaimValueTypes.Integer64),
             new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
             new Claim(ClaimTypes.Name, user.Name),
             new Claim(ClaimTypes.Role, user.Role)
         };
 
-            var tokenDescriptor = new SecurityTokenDescriptor
-            {
-                Subject = new ClaimsIdentity(claims),
-                Expires = DateTime.UtcNow.AddHours(1),
-                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature),
-                Issuer = _configuration["Jwt:Issuer"],
-                Audience = _configuration["Jwt:Audience"]
-            };
+            var key = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(_configuration["Jwt:Key"]));
+            var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
-            var token = tokenHandler.CreateToken(tokenDescriptor);
-            return tokenHandler.WriteToken(token);
+            var token = new JwtSecurityToken(
+                issuer: _configuration["Jwt:Issuer"],
+                audience: _configuration["Jwt:Audience"],
+                claims: claims,
+                expires: DateTime.UtcNow.AddMinutes(double.Parse(_configuration["Jwt:ExpireMinutes"])),
+                signingCredentials: credentials);
+
+            return new JwtSecurityTokenHandler().WriteToken(token);
         }
     }
 

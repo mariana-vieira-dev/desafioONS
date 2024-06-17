@@ -19,3 +19,4 @@ C:\temp\DesafioONS\DesafioONS.Common\obj\Debug\net8.0\refint\DesafioONS.Common.d
 C:\temp\DesafioONS\DesafioONS.Common\obj\Debug\net8.0\DesafioONS.Common.pdb
 C:\temp\DesafioONS\DesafioONS.Common\obj\Debug\net8.0\DesafioONS.Common.genruntimeconfig.cache
 C:\temp\DesafioONS\DesafioONS.Common\obj\Debug\net8.0\ref\DesafioONS.Common.dll
+C:\temp\DesafioONS\DesafioONS.Common\obj\Debug\net8.0\DesafioONS.Common.sourcelink.json

@@ -15,3 +15,4 @@ C:\temp\DesafioONS\DesafioONS.Repository\obj\Debug\net8.0\refint\DesafioONS.Repo
 C:\temp\DesafioONS\DesafioONS.Repository\obj\Debug\net8.0\DesafioONS.Repository.pdb
 C:\temp\DesafioONS\DesafioONS.Repository\obj\Debug\net8.0\DesafioONS.Repository.genruntimeconfig.cache
 C:\temp\DesafioONS\DesafioONS.Repository\obj\Debug\net8.0\ref\DesafioONS.Repository.dll
+C:\temp\DesafioONS\DesafioONS.Repository\obj\Debug\net8.0\DesafioONS.Repository.sourcelink.json

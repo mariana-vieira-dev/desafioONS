@@ -150,3 +150,4 @@ C:\temp\DesafioONS\DesafioONS.Api\obj\Debug\net8.0\DesafioONS.Api.genruntimeconf
 C:\temp\DesafioONS\DesafioONS.Api\obj\Debug\net8.0\ref\DesafioONS.Api.dll
 C:\temp\DesafioONS\DesafioONS.Api\bin\Debug\net8.0\BCrypt.Net-Next.dll
 C:\temp\DesafioONS\DesafioONS.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\temp\DesafioONS\DesafioONS.Api\obj\Debug\net8.0\DesafioONS.Api.sourcelink.json

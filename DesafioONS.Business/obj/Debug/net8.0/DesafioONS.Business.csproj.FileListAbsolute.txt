@@ -17,3 +17,4 @@ C:\temp\DesafioONS\DesafioONS.Business\obj\Debug\net8.0\refint\DesafioONS.Busine
 C:\temp\DesafioONS\DesafioONS.Business\obj\Debug\net8.0\DesafioONS.Business.pdb
 C:\temp\DesafioONS\DesafioONS.Business\obj\Debug\net8.0\DesafioONS.Business.genruntimeconfig.cache
 C:\temp\DesafioONS\DesafioONS.Business\obj\Debug\net8.0\ref\DesafioONS.Business.dll
+C:\temp\DesafioONS\DesafioONS.Business\obj\Debug\net8.0\DesafioONS.Business.sourcelink.json
